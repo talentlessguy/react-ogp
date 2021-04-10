@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.svg" height="200px" />
+</p>
+
 # react-ogp
 
 ![Top lang][top-lang-badge-url]
@@ -12,6 +16,7 @@
 
 - Automatically sets `url` / `secure_url` for images and videos.
 - TypeScript support
+- Forcing to complete _all_ properties for an object not to forget to fill some fields
 
 ## Install
 
