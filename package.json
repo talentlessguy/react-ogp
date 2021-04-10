@@ -1,18 +1,42 @@
 {
   "name": "react-ogp",
   "version": "0.0.0",
-  "description": "🌐 The ultimate React OpenGraph component",
-  "main": "index.js",
+  "description": "The ultimate React OpenGraph component",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "prebuild": "rm -rf dist",
+    "prepare": "pnpm build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/talentlessguy/react-ogp.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "ogp",
+    "opengraph",
+    "seo",
+    "meta"
+  ],
+  "author": "v1rtl",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/talentlessguy/react-ogp/issues"
   },
@@ -24,5 +48,8 @@
     "rollup": "^2.45.1",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=16"
   }
 }

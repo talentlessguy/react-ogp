@@ -7,6 +7,12 @@
 - Automatically sets `url` / `secure_url` for images and videos.
 - TypeScript support
 
+## Install
+
+```sh
+pnpm i react react-ogp
+```
+
 ## Usage
 
 ```jsx

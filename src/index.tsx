@@ -1,6 +1,6 @@
 import React from 'react'
 
-type OGPVideo = {
+export type OGPVideo = {
   actor: string
   actorRole: string
   director: string
@@ -11,7 +11,15 @@ type OGPVideo = {
   series?: string
 }
 
-type OGPMedia = {
+export type OGPSong = {
+  duration: string
+  album: string
+  albumDisc: string
+  albumTrack: string
+  musician: string
+}
+
+export type OGPMedia = {
   width: number
   height: number
   alt: string
@@ -42,6 +50,7 @@ export interface OGPProps {
   audio?: string
   video?: string | OGPMedia
   movie?: OGPVideo
+  song?: OGPSong
 }
 
 export const OGP = ({
@@ -54,10 +63,20 @@ export const OGP = ({
   audio,
   video,
   movie,
-  description
+  description,
+  song
 }: OGPProps) => {
   return (
     <>
+      {song && (
+        <>
+          <meta name="music:duration" content={song.duration} />
+          <meta name="music:album" content={song.album} />
+          <meta name="music:album:disc" content={song.albumDisc} />
+          <meta name="music:album:track" content={song.albumTrack} />
+          <meta name="music:musician" content={song.musician} />
+        </>
+      )}
       {audio && <meta name="og:audio" content={audio} />}
       {movie && (
         <>
