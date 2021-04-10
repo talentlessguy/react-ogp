@@ -1,6 +1,6 @@
 {
   "name": "react-ogp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The ultimate React OpenGraph component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
