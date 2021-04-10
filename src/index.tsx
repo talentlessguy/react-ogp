@@ -53,7 +53,8 @@ export const OGP = ({
   image,
   audio,
   video,
-  movie
+  movie,
+  description
 }: OGPProps) => {
   return (
     <>
@@ -107,7 +108,7 @@ export const OGP = ({
 
       <meta name="og:url" content={url} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:description" content="Generate badges for your crypto wallets with preview page." />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
     </>
   )
