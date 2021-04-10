@@ -10,7 +10,7 @@
 ![Last commit][last-commit-badge-url]
 ![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url]
 
-🌐 The ultimate React OpenGraph component.
+The ultimate React OpenGraph component.
 
 ## Features
 
