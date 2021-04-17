@@ -4,7 +4,6 @@
 
 # react-ogp
 
-![Top lang][top-lang-badge-url]
 ![Vulnerabilities][vulns-badge-url]
 [![Version][v-badge-url]][npm-url]
 ![Last commit][last-commit-badge-url]
@@ -74,7 +73,6 @@ export default function Index() {
 }
 ```
 
-[top-lang-badge-url]: https://img.shields.io/github/languages/top/talentlessguy/react-ogp.svg?style=flat-square
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/react-ogp.svg?style=flat-square
 [v-badge-url]: https://img.shields.io/npm/v/react-ogp.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/react-ogp
