@@ -187,42 +187,44 @@ export const OGP = ({
           <meta name="profile:gender" content={profile.gender} />
         </>
       )}
-      {typeof video === 'string' ? (
-        <meta name="og:video" content={video} />
-      ) : (
-        <>
-          <meta
-            property="og:video:secure_url"
-            content={video.url.includes('http://') ? video.url.replace('http://', 'https://') : video.url}
-          />
-          <meta property="og:video:width" content={video.width.toString()} />
-          <meta property="og:video:height" content={video.height.toString()} />
-          <meta name="og:video:url" content={video.url} />
-          <meta property="og:video:type" content={video.type || 'video/mp4'} />
-        </>
-      )}
+      {video &&
+        (typeof video === 'string' ? (
+          <meta name="og:video" content={video} />
+        ) : (
+          <>
+            <meta
+              property="og:video:secure_url"
+              content={video.url.includes('http://') ? video.url.replace('http://', 'https://') : video.url}
+            />
+            <meta property="og:video:width" content={video.width.toString()} />
+            <meta property="og:video:height" content={video.height.toString()} />
+            <meta name="og:video:url" content={video.url} />
+            <meta property="og:video:type" content={video.type || 'video/mp4'} />
+          </>
+        ))}
       <meta name="og:locale" content={locale} />
       <meta name="og:title" content={title} />
-      {typeof image === 'string' ? (
-        <>
-          <meta name="og:image" content={image} />
-          <meta
-            property="og:image:secure_url"
-            content={image.includes('http://') ? image.replace('http://', 'https://') : image}
-          />
-        </>
-      ) : (
-        <>
-          <meta
-            property="og:image:secure_url"
-            content={image.url.includes('http://') ? image.url.replace('http://', 'https://') : image.url}
-          />
-          <meta property="og:image:width" content={image.width.toString()} />
-          <meta property="og:image:height" content={image.height.toString()} />
-          <meta name="og:image:url" content={image.url} />
-          <meta property="og:image:type" content={image.type || 'image/jpeg'} />
-        </>
-      )}
+      {image &&
+        (typeof image === 'string' ? (
+          <>
+            <meta name="og:image" content={image} />
+            <meta
+              property="og:image:secure_url"
+              content={image.includes('http://') ? image.replace('http://', 'https://') : image}
+            />
+          </>
+        ) : (
+          <>
+            <meta
+              property="og:image:secure_url"
+              content={image.url.includes('http://') ? image.url.replace('http://', 'https://') : image.url}
+            />
+            <meta property="og:image:width" content={image.width.toString()} />
+            <meta property="og:image:height" content={image.height.toString()} />
+            <meta name="og:image:url" content={image.url} />
+            <meta property="og:image:type" content={image.type || 'image/jpeg'} />
+          </>
+        ))}
 
       <meta name="og:url" content={url} />
       <meta property="og:site_name" content={siteName} />
